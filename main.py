@@ -6,14 +6,15 @@ from datetime import datetime
 import subprocess
 
 # === CONFIGURACIÓN ===
+# IPS DE EJEMPLO
 RANGOS_IP = [
-    ("192.168.1.5", "192.168.1.115"), #sede central
-    ("192.168.0.5", "192.168.0.25"), #sede grt
-    ("192.168.3.5", "192.168.3.41"), #sede miraflores
-    ("192.168.3.5", "192.168.3.51") #sede miraflores p1 p3 p6 y p7
+    ("192.168.1.5", "192.168.1.115"), #NVR 1
+    ("192.168.0.5", "192.168.0.25"), #NVR 2
+    ("192.168.3.5", "192.168.3.41"), #NVR 3
+    ("192.168.3.5", "192.168.3.51") #NVR 4
 ]
 
-# Lista de IPs que deben ser ignoradas (desactivadas, en mantenimiento, etc.)
+# Lista de IPs de ejemplo que deben ser ignoradas por equipos que se encuentran desactivadas, en mantenimiento, etc.
 IPS_IGNORADAS = [
     "192.168.1.64",
     "192.168.1.56",
@@ -21,12 +22,6 @@ IPS_IGNORADAS = [
     "192.168.1.38",
     "192.168.1.39"
 ]
-
-#RANGOS_IP = [
-#    ("192.168.1.4", "192.168.1.100"),
-#    ("192.168.0.4", "192.168.0.50")
-#]
-
 
 CHEQUEO_INTERVALO_SEG = 15  # cada cuánto tiempo se verifica
 TIEMPO_DESCONEXION_ALERTA = 60  # segundos que deben pasar para considerar desconexión
